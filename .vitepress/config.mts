@@ -6,6 +6,10 @@ export default defineConfig({
   description: "The documentation for LeakHW",
   base: '/docs/',
 
+  head: [
+    ['link', { rel: 'icon', href: 'https://rawcdn.githack.com/LeakHW/.github/refs/heads/main/assets/leakhw.png'}]
+  ],
+
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },

@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="200" height="200" alt="leakhw" src="https://raw.githubusercontent.com/LeakHW/.github/refs/heads/main/assets/leakhw.png" />
+  <img width="200" height="200" alt="leakhw" src="https://rawcdn.githack.com/LeakHW/.github/refs/heads/main/assets/leakhw.png" />
   <h1 align="center">Leak Developer Wiki</h1>
   <p align="center">A comprehensive guide to building and integrating with the Leak Extension</p>
 </p>
