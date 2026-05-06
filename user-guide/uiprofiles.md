@@ -10,7 +10,7 @@ UI Profiles are a certain set of styles that can be applied to a website. For ex
 ---
 
 ## Accessing the UI profiles menu
-To access the UI profiles menu, open the Leak menu and press the second icon at the bottom (the clothes icon).
+To access the UI profiles menu, open the Leak menu and press the second icon at the bottom (the palette icon).
 
 ---
 

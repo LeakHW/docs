@@ -37,6 +37,38 @@ Use `window.Leak.registerTool(id, callback)` to define your tool's behavior. The
 })();
 ```
 
+### **1.5 Site Config Registration**
+
+To make a tool appear on a specific platform, add it to that platform's `config.js` file.
+
+Example:
+
+```javascript
+{
+  id: 'autosolve',
+  label: 'Autosolve',
+  category: 'AI',
+  description: 'Automatically solve questions using AI.',
+  settingsTab: 'AI',
+  settings: [
+    {
+      id: 'autosolve_ocr_enabled',
+      label: 'Enable OCR',
+      description: 'Use OCR to extract text from question images.',
+      default: true,
+      storageKey: 'leak_autosolve_ocr_enabled'
+    }
+  ],
+  config: {}
+}
+```
+
+Notes:
+- `category` controls which tab the tool appears in on the **Tools** page.
+- `settingsTab` controls which category the tool's settings appear in inside **Settings**.
+- `settings` defines toggleable settings rendered automatically by the Leak Menu.
+- `storageKey` is optional but recommended when you want a stable explicit key in `chrome.storage.local`.
+
 ### **2. Loading UI Templates**
 
 Tools can dynamically fetch their HTML templates from the extension.
@@ -68,6 +100,7 @@ The `window.Leak` object provides several methods for interacting with the tool 
 | :---------------------- | :------------- | :--------- | :-------------------------------------------------------------------------------- |
 | `leak_menu`             | Leak Menu      | -          | The main control center.                                                          |
 | `chatbot`               | AI Assistant   | AI         | Homework helper powered by Tye AI.                                                |
+| `autosolve`             | Autosolve      | AI         | Solves Sparx Reader and Sparx Maths questions using the AI assistant.              |
 | `scientific_calculator` | Calculator     | Helpers    | A full scientific calculator.                                                     |
 | `text_selector`         | Text Selector  | Helpers    | Bypasses selection/copy restrictions.                                             |
 | `dev_info`              | DOM Info       | Debug      | Shows element metadata on hover.                                                  |
